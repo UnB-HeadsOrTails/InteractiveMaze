@@ -70,4 +70,12 @@ Vector::scalar_product(const Vector *vector) const
   return (this->getX()*vector->getX()) + (this->getY()*vector->getY()) + (this->getZ()*vector->getZ());
 }
 
+Vector*
+Vector::vector_product(const Vector * vector) const
+{
+  return new Vector(
+            ( this->getY()*vector->getZ()) - ( this->getZ() * vector->getY()),
+            ( this->getZ()*vector->getX()) - ( this->getX() * vector->getZ()),
+            ( this->getX()*vector->getY()) - ( this->getY() * vector->getX()));
+}
 

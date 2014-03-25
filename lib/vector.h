@@ -20,8 +20,9 @@ class Vector{
 		Vector* operator=(Vector *vector);
 		Vector* add_vector(const Vector *vector) const ;
 		Vector* subtract_vector(const Vector *vector) const;
-		Vector* normalization() const ;
     float scalar_product(const Vector *vector) const;
+		Vector* vector_product(const Vector * vector)const ;
+		Vector* normalization() const ;
 
 
 	private:

@@ -1,0 +1,4 @@
+
+#!bin/bash
+g++ -o prog -W -Wall -pedantic -ansi main.cpp vector.cpp
+
