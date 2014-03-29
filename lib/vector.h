@@ -8,7 +8,7 @@ using namespace std;
 
 class Vector{
 	public:
-		friend ostream& operator<<	(ostream& os,const Vector * vector);
+		friend ostream& operator<<	(ostream& os,const Vector  vector);
 		
 
 		Vector(const float x=0,const float y=0, const float z=0);
@@ -17,13 +17,12 @@ class Vector{
 		float getZ()	const;
 		float length() const;
 
-		Vector* operator=(Vector *vector);
-		Vector* add_vector(const Vector *vector) const ;
-		Vector* subtract_vector(const Vector *vector) const;
-    float scalar_product(const Vector *vector) const;
-		Vector* vector_product(const Vector * vector)const ;
-		Vector* normalization() const ;
-
+		Vector operator=(Vector vector);
+		Vector operator+(Vector vector);
+		Vector operator-(Vector vector);
+		float  operator*( Vector vector);
+		Vector operator*=( Vector vector); 
+		Vector normalization() ;
 
 	private:
 		float x,y,z;	
