@@ -3,7 +3,7 @@
 
 class GameObject {
 public:
-	GameObject(){};
+	virtual ~GameObject();
 };
 
 #endif

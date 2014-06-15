@@ -1,6 +1,8 @@
 #include  <iostream>
 #include "vector.h"
 #include "point_3d.h"
+#include "positionable.h"
+#include "game_state_machine.h"
 
 using namespace std;
 
