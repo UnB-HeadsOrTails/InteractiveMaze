@@ -1,7 +1,6 @@
-
-#include <iostream>
+#include  <iostream>
 #include "vector.h"
-#include "dot.h"
+#include "point_3d.h"
 
 using namespace std;
 
@@ -37,12 +36,12 @@ int main(){
         << "V5 = "<< v5 << endl
         << "V6 = "<< v6 << endl;
 
-	Dot d1,d2;
+	Point3D p1, p2;
 
-  d1 = Dot(1,2,3);
-	d2 = d1;
+  p1 = Point3D(1,2,3);
+	 p2 = p1;
 
-	cout << "Dot 1 = "<< d1 << endl 
-			 <<"Dot 2 = "<< d2 << endl;
+	cout << "Point3D 1 = "<< p1 << endl 
+			 <<"Point3D 2 = "<<  p2 << endl;
 }
 
