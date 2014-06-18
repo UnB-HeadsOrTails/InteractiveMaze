@@ -1,7 +1,9 @@
 #ifndef UPDATABLE_H
 #define UPDATABLE_H
 
-class Updatable {
+#include "game_object.h"
+
+class Updatable : public GameObject {
 public:
 	virtual ~Updatable();
 
