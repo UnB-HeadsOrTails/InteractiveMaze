@@ -1,0 +1,78 @@
+% primeiro_latex.tex - Meu primeiro documento LATEX
+
+\documentclass{article}
+
+\begin{document}
+
+UnB-Gama \\
+Aluno: Luciano Prestes Cavalcanti \\
+Disciplina: Introducao a Computacao Grafica \\
+\\
+Lista 03
+\\
+\\
+a) Descricao da Solucao Proposta
+\\
+Criacao de classes capazes de gerenciar os detalhes necessários a implementacao
+sendo elas color.h, que eh responsavel por gerenciar as variaveis de cor,
+point.h para gerenciar os pontos, vector3d.h, para tratar os vetores,
+mesh.h, para tratar as malhas triangulares, drawable.h, que eh uma
+interface com o metodo draw() que obriga a qualquer coisa que seja
+renderizavel ser capaz de se imprimir na tela, ou seja, os objetos
+tem a responsabilidade de se auto renderizar dentro da tela,
+screen.h, para tratar a renderizacao da tela, e uma main.cpp,
+aonde esta implementado o loop principal.
+\\
+Instrucoes do Programa
+\\
+1 - Use as SETAS para MOVER o COELHO;
+2 - Use PAGEUP para AMPLIAR e PAGEDOWN para REDIZIR o TAMANHO do COELHO;
+3 - Pressione L para MOSTRAR o COELHO como LINHAS;
+3 - Pressione T para MOSTRAR o COELHO como PLANO;
+\\
+\\
+b) Estrutura de Dados Proposta
+\\
+classe Drawable, eh uma interface, cujo o unico metodo eh o draw(),
+a arquitetura dessa implementacao obriga que qualquer coisa que seja
+renderizada na tela deve implementar Drawable, para garantir que todo
+objeto a ser renderizado saiba se auto-renderizar.
+\\
+\\
+classe Color, armazena a informacao quanto as cores RGBA.
+\\
+\\
+classe Point3D, armazena as coordenadas de um ponto de tres dimensoes,
+ou seja, x, y e z, possui uma instancia de Color, para determinar a cor
+no ponto, nao implementa Drawable, porem ele mesmo eh responsavel por
+executar as funcoes glColor3d e glVertex3f, tambem eh responsavel por
+fazer as operacoes de igualdade, atribuicao e subtracao em relacao a
+outros pontos.
+\\
+\\
+classe Vector3D, herda da classe Point3D, porem acrescenta metodos
+de multiplicacao por um escalar, magnitude, produto escalar, e
+produto vetorial
+\\
+\\
+classe Mesh, responsavel por carregar um arquivo .off e torna-lo
+visivel na tela, responsavel tambem por ampliar ou reduzir a imagem,
+e reposiciona-la na tela.
+\\
+\\
+classe Screen, responsavel por iniciar o SDL e o OpenGL, determinar
+o tamanho da tela, e tambem receber objetos do tipo Drawable para
+renderiza-los na tela.
+\\
+\\
+c) Principais Licoes Aprendidas
+\\
+O formato .off eh um padrao aonde se torna pratico carregar as
+informacoes tridimensionais de desenhos. Importante tambem foi o
+aprendizado quanto a utilizacao de vetores para redimensionar e
+mover objetos em 3D.
+
+
+
+
+\end{document}
