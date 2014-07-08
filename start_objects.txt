@@ -1,5 +1,7 @@
-M Model_Texture/Bola/Bola.obj
-M Model_Texture/Chao/Chao.obj
-M Model_Texture/ParedeLabirinto/ParedeLabirinto.obj
-M Model_Texture/Tapete/Tapete.obj
-M Model_Texture/TexturaArcadeEsquedo/ArcardeDireito.obj
+M Model_Texture/Bola/Bola.obj 1.19209e-07 -1 0
+M Model_Texture/Chao/Chao.obj 0 0 0
+M Model_Texture/ParedeLabirinto/ParedeLabirinto.obj 0 0 0
+M Model_Texture/Tapete/Tapete.obj 0 0 0
+M Model_Texture/TexturaArcadeEsquedo/ArcardeDireito.obj 0 0 0
+M Model_Texture/TexturaArcadeEsquedo/ArcardeDireito.obj 0 0 0
+M Model_Texture/TexturaArcadeEsquedo/ArcardeDireito.obj 0 0 0

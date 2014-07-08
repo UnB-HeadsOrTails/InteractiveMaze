@@ -8,10 +8,10 @@
 
 using namespace std;
 
-const float VELOCITY_MOVE_OBJECT = 0.05;
+const float VELOCITY_MOVE_OBJECT = 0.1;
 const float VELOCITY_ANGLE_OBJECT = 5.0;
 
-const float VELOCITY_MOVE_CAMERA = 0.05;
+const float VELOCITY_MOVE_CAMERA = 0.1;
 const float VELOCITY_ROTATE_CAMERA = 0.005;
 const float VELOCITY_ANGLE_CAMERA = 0.05;
 
@@ -47,11 +47,15 @@ int main()
 	{
 		if(lineType == 'M')
 		{
+			float x, y, z;
+
 			cin >> fileName;
+			cin >> x >> y >> z;
 			Mesh mesh;
 			mesh.loadFile(fileName);
-			mesh.setPosition(0.0, 0.0, 0.0);
 			mesh.resizeToScreen();
+			mesh.setPosition(x, y, z);
+			// mesh.translate();
 
 			vectorMesh.push_back(mesh);
 		}
@@ -229,6 +233,14 @@ void moveCamera()
 
 void moveObjects()
 {
+	if(sdlEvent.key.keysym.sym == SDLK_r)
+	{
+		if(sdlEvent.key.state == SDL_PRESSED)
+		{
+			vectorMesh[meshIndex].setDeltaX(4);
+		}
+	}
+
 	if(sdlEvent.key.keysym.sym == SDLK_p)
 	{
 		if(sdlEvent.key.state == SDL_PRESSED)
@@ -431,6 +443,11 @@ void printInstructions()
 	cout << "| A - Rotacionao no eixo Y -" << endl;
 	cout << "| E - Rotacionao no eixo Z +" << endl;
 	cout << "| Q - Rotacionao no eixo Z -" << endl;
+	cout << "+-----:" << endl;
+
+	cout << "+-----Selecionar Objeto:" << endl;
+	cout << "| C - Seleciona o proximo objeto" << endl;
+	cout << "| X - Seleciona o objeto anterior" << endl;
 	cout << "+-----:" << endl;
 
 	cout << "+-----Renderizacao:" << endl;

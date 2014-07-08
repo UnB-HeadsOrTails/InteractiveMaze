@@ -24,6 +24,8 @@ public:
 	void resize(float scalar);		//int Resize_Mesh(mesh *pmesh);
 	void loadFile(string fileName);	//int Load_Mesh(mesh *pmesh, char *File_Name);
 
+	void translate();
+
 	void rotateX(float angleX);
 	void rotateY(float angleY);
 	void rotateZ(float angleZ);
@@ -36,8 +38,13 @@ public:
 	Point3D getMaxPoint();
 
 	float getDeltaX();
+	void setDeltaX(float deltaX);
+
 	float getDeltaY();
+	void setDeltaY(float deltaY);
+
 	float getDeltaZ();
+	void setDeltaZ(float deltaZ);
 
 	void showPosition();
 	void showDimensions();
@@ -169,12 +176,28 @@ Mesh::loadFile(string fileName)
 }
 
 void
+Mesh::translate()
+{
+	Point3D midPoint = getMidPoint();
+	float minX = midPoint.x;
+	float minY = midPoint.y;
+	float minZ = midPoint.z;
+
+	for(unsigned int i = 0; i < this->vectorPoint.size(); i++)
+	{
+		this->vectorPoint[i].x -= ((getDeltaX()/2) + minX);
+		this->vectorPoint[i].y -= ((getDeltaY()/2) + minY);
+		this->vectorPoint[i].z -= ((getDeltaZ()/2) + minZ);
+	}
+}
+
+void
 Mesh::rotateX(float angleX)
 {
 	float pi = 3.141592653589793;
 	float radAngleX = angleX*pi/180.0;
-	vector<Point3D> a = vectorPoint;
-	vector<Point3D> b = vectorPoint;
+	vector<Point3D> a = this->vectorPoint;
+	vector<Point3D> b = this->vectorPoint;
 
 	Point3D midPoint = getMidPoint();
 	float midY = midPoint.y;
@@ -271,6 +294,15 @@ Mesh::getDeltaX()
 	Point3D minPoint = getMinPoint();
 
 	return maxPoint.x - minPoint.x;
+}
+
+void
+Mesh::setDeltaX(float deltaX)
+{
+	cout << endl;
+	cout << "deltaX: " << deltaX << endl;
+	cout << "getDeltaX(): " << getDeltaX() << endl;
+	resize(deltaX / getDeltaX());
 }
 
 float
@@ -510,6 +542,13 @@ Mesh::getMaxPoint()
 			maxY = vectorPoint[i].y;
 			maxZ = vectorPoint[i].z;
 		}
+
+		if(vectorPoint[i].x > maxX)
+			maxX = vectorPoint[i].x;
+		if(vectorPoint[i].y > maxY)
+			maxY = vectorPoint[i].y;
+		if(vectorPoint[i].z > maxZ)
+			maxZ = vectorPoint[i].z;
 	}
 
 	maxPoint = Point3D(maxX, maxY, maxZ);
