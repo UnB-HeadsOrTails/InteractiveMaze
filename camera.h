@@ -54,14 +54,14 @@ Camera::moveFrontAndBack(float velocity)
 
 	if(velocity != 0)
 	{
-		cout << endl << "+-------------moveFrontAndBack--------------+" << endl;
-		cout << "pointEye.x: " << this->pointEye.x << endl;
-		cout << "pointEye.y: " << this->pointEye.y << endl;
-		cout << "pointEye.z: " << this->pointEye.z << endl;
-		cout << "pointReference.x: " << this->pointReference.x << endl;
-		cout << "vector3d.x: " << vector3d.x << endl;
-		cout << "vector3d.y: " << vector3d.y << endl;
-		cout << "vector3d.z: " << vector3d.z << endl;
+		// cout << endl << "+-------------moveFrontAndBack--------------+" << endl;
+		// cout << "pointEye.x: " << this->pointEye.x << endl;
+		// cout << "pointEye.y: " << this->pointEye.y << endl;
+		// cout << "pointEye.z: " << this->pointEye.z << endl;
+		// cout << "pointReference.x: " << this->pointReference.x << endl;
+		// cout << "vector3d.x: " << vector3d.x << endl;
+		// cout << "vector3d.y: " << vector3d.y << endl;
+		// cout << "vector3d.z: " << vector3d.z << endl;
 
 		this->pointEye.x += vector3d.x;
 		this->pointEye.y += vector3d.y;
@@ -84,11 +84,11 @@ Camera::rotateRightAndLeft(float velocity)
 
 	if(velocity != 0)
 	{
-		cout << endl << "+-------------rotateRightAndLeft--------------+" << endl;
-		cout << "pointEye.x: " << this->pointEye.x << endl;
-		cout << "pointEye.y: " << this->pointEye.y << endl;
-		cout << "pointEye.z: " << this->pointEye.z << endl;
-		cout << "pointReference.x: " << this->pointReference.x << endl;
+		// cout << endl << "+-------------rotateRightAndLeft--------------+" << endl;
+		// cout << "pointEye.x: " << this->pointEye.x << endl;
+		// cout << "pointEye.y: " << this->pointEye.y << endl;
+		// cout << "pointEye.z: " << this->pointEye.z << endl;
+		// cout << "pointReference.x: " << this->pointReference.x << endl;
 	}
 
 	this->pointUp.x = 0;

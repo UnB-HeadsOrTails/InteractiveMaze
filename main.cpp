@@ -32,15 +32,14 @@ void moveCamera();
 void moveObjects();
 void (*keyboardFunction)();
 
+void printInstructions();
+
 int main()
 {
 	bool finish;
 	Screen screen;
 
-	cout << "1 - Use as SETAS para MOVER o COELHO;" << endl;
-	cout << "2 - Use PAGEUP para AMPLIAR e PAGEDOWN para REDIZIR o TAMANHO do COELHO;" << endl;
-	cout << "3 - Pressione L para MOSTRAR o COELHO como LINHAS;" << endl;
-	cout << "3 - Pressione T para MOSTRAR o COELHO como PLANO;" << endl;
+	printInstructions();
 
 	char lineType;
 	string fileName;
@@ -278,7 +277,6 @@ void moveObjects()
 		if(sdlEvent.key.state == SDL_PRESSED)
 		{
 			vectorMesh[meshIndex].resize(0.83);
-			vectorMesh[meshIndex].showDimensions();
 		}
 	}
 
@@ -393,4 +391,53 @@ void moveObjects()
 		else
 			velocityAngleZ = 0;
 	}
+}
+
+void printInstructions()
+{
+	cout << endl;
+	cout << "+INSTRUCOES+" << endl;
+	cout << endl;
+
+	cout << "+---------------GERAL---------------+" << endl;
+	cout << "| 1 - Movimentacao da CAMERA" << endl;
+	cout << "| 2 - Movimentacao dos OBJETOS" << endl;
+	cout << "+-----------------------------------+" << endl;
+	cout << endl;
+
+	cout << "+--------------CAMERA--------------+" << endl;
+	cout << "+-----Movimentacao:" << endl;
+	cout << "| UP - Andar para frente" << endl;
+	cout << "| DOWN - Andar para tras" << endl;
+	cout << "| RIGHT - Girar para direita" << endl;
+	cout << "| LEFT - Girar para esquerda" << endl;
+	cout << "+----------------------------------+" << endl;
+	cout << endl;
+
+	cout << "+--------------OBJETOS--------------+" << endl;
+	cout << "+-----Movimentacao:" << endl;
+	cout << "| UP - Mover no eixo Y +" << endl;
+	cout << "| DOWN - Mover no eixo Y -" << endl;
+	cout << "| RIGHT - Mover no eixo X +" << endl;
+	cout << "| LEFT - Mover no eixo Y -" << endl;
+	cout << "| M - Mover no eixo Z +" << endl;
+	cout << "| N - Mover no eixo Z -" << endl;
+	cout << "+-----:" << endl;
+
+	cout << "+-----Rotacao:" << endl;
+	cout << "| W - Rotacionao no eixo X +" << endl;
+	cout << "| S - Rotacionao no eixo X -" << endl;
+	cout << "| D - Rotacionao no eixo Y +" << endl;
+	cout << "| A - Rotacionao no eixo Y -" << endl;
+	cout << "| E - Rotacionao no eixo Z +" << endl;
+	cout << "| Q - Rotacionao no eixo Z -" << endl;
+	cout << "+-----:" << endl;
+
+	cout << "+-----Renderizacao:" << endl;
+	cout << "| L - Renderizar objeto por linha" << endl;
+	cout << "| T - Renderizar objeto por plano" << endl;
+	cout << "+-----:" << endl;
+	cout << endl;
+	cout << "+-----------------------------------+" << endl;
+	cout << endl;	
 }
