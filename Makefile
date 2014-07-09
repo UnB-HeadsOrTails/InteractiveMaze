@@ -3,3 +3,7 @@ all:
 	
 run:
 	cat start_objects.txt | ./prog
+
+clean:
+	rm prog
+

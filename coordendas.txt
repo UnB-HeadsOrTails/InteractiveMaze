@@ -1,0 +1,121 @@
+coordenadas objetos:
+
+bola
++----------showPosition----------+
+midX: 1.5
+midY: -0.9
+midZ: 0
++----------showDimensions----------+
+deltaX: 0.212925
+deltaY: 0.212925
+deltaZ: 0.212925
+
+
+Chao
++----------showPosition----------+
+midX: -0.0999994
+midY: 0.2
+midZ: 0
+
++----------showDimensions----------+
+deltaX: 4.63864
+deltaY: 2.27544
+deltaZ: 4.89749
+
+
+Parede Labirinto
++----------showPosition----------+
+midX: 0.7
+midY: 0.7
+midZ: 0
+
++----------showDimensions----------+
+deltaX: 0.218911
+deltaY: 0.256536
+deltaZ: 0.0513072
+
+Tapete:
+
++----------showPosition----------+
+midX: 1.19209e-07
+midY: -0.9
+midZ: -1.19209e-07
+
++----------showDimensions----------+
+deltaX: 1.6336
+deltaY: 0
+deltaZ: 1.30688
+
+
+Arcade Esquerdo 
++----------showPosition----------+
+midX: 1.7998
+midY: -0.6
+midZ: -1.50002
+
++----------showDimensions----------+
+deltaX: 0.397036
+deltaY: 0.653881
+deltaZ: 0.403874
+
+
+
+Arcade Direito
++----------showPosition----------+
+midX: -1.98943
+midY: -0.700608
+midZ: -1.91096
+
++----------showDimensions----------+
+deltaX: 0.473302
+deltaY: 0.798027
+deltaZ: 0.487925
+
+
+
+MesaLabirinto
+
++----------showPosition----------+
+midX: 0
+midY: -0.4
+midZ: 0
+
++----------showDimensions----------+
+deltaX: 1.14357
+deltaY: 0.160743
+deltaZ: 0.791288
+
+Luminaria
+
++----------showPosition----------+
+midX: 2.68221e-07
+midY: 0.6
+midZ: 0
+
++----------showDimensions----------+
+deltaX: 0.550817
+deltaY: 0.949167
+deltaZ: 0.550817
+
+
+Mola
+
++----------showPosition----------+
+midX: 1.49012e-08
+midY: -0.7
+midZ: 0
+
++----------showDimensions----------+
+deltaX: 0.151778
+deltaY: 0.450458
+deltaZ: 0.151778
+
+
+
+
+
+
+
+
+
+
